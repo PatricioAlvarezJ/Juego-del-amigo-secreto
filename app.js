@@ -11,6 +11,13 @@ let amigos = [];
 let ganadores = new Set();
 let ultimoGanador = null;
 
+// funcion para agregar participante con boton "Enter"
+document.getElementById('amigo').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        agregarParticipante();
+    }
+})
+
 function agregarParticipante() {
     let participante = document.getElementById('amigo').value;
     if (participante.trim() === "") {
