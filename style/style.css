@@ -211,3 +211,36 @@ ul {
 .button-reset:hover {
     background-color: var(--color-button-hover);
 }
+
+/* Estilo para la lista de amigos */
+.name-list {
+    max-height: 90px; 
+    transition: all 0.3s ease;
+}
+
+.name-list.scrollable {
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.name-list li {
+    padding: 0px 10px;
+    margin: 5px 0;
+}
+
+/* Estilo de la barra de scroll */
+.name-list.scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+
+.name-list.scrollable::-webkit-scrollbar-track {
+    background: var(--color-secondary);
+    border-radius: 4px;
+}
+
+.name-list.scrollable::-webkit-scrollbar-thumb {
+    background: var(--color-tertiary);
+    border-radius: 4px;
+}
