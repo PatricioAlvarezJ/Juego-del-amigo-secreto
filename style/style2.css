@@ -1,0 +1,117 @@
+:root {
+    --color-primary: #9c6f0f;
+    --color-secondary:#373A40;
+    --color-tertiary: #C4C4C4;
+    --color-button: #77B254;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+    position: relative;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+.header__menu__link{
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.header__menu__link:hover {
+    color: var(--color-tertiary);
+}
+
+.header__github-link {
+    font-family: "inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    right: 30%;
+}
+
+.header__github-link:hover {
+    color: var(--color-tertiary);
+}
+
+.header__github-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Footer */
+.footer{
+    color:var(--color-secondary);
+    background-color: var(--color-tertiary);
+    padding: 20px;
+    text-align: center;
+    font-family: "inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;       
+}
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.presentacion {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.presentacion__contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2rem;
+    font-family: "inter", sans-serif;
+}
+
+.presentacion__contenido__texto {
+    font-size: 1rem;
+    font-family: "inter", sans-serif;
+}
+
