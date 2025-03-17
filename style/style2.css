@@ -16,20 +16,24 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
 }
 
-.header{
-    padding: 2% 0% 0% 15%;
+.header {
+    padding: 30px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
 }
 
-.header__menu{
+.header__menu {
     display: flex;
     gap: 80px;
+    align-items: center;
 }
 .header__menu__link{
     font-family: "Inter", sans-serif;
@@ -44,14 +48,15 @@ body {
 }
 
 .header__github-link {
+    position: static; /* Quitar el posicionamiento absoluto */
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-family: "inter", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-secondary);
     text-decoration: none;
-    position: absolute;
-    top: 30px;
-    right: 30%;
 }
 
 .header__github-link:hover {
@@ -64,6 +69,7 @@ body {
 }
 
 .main-content {
+    flex: 1; /* Esto hace que el contenido principal ocupe todo el espacio disponible */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -72,6 +78,7 @@ body {
 
 /* Footer */
 .footer{
+    margin-top: auto; /* Esto empuja el footer al fondo */
     color:var(--color-secondary);
     background-color: var(--color-tertiary);
     padding: 20px;
@@ -113,5 +120,107 @@ body {
 .presentacion__contenido__texto {
     font-size: 1rem;
     font-family: "inter", sans-serif;
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header__menu {
+        gap: 40px;
+    }
+
+    .header__github-link {
+        margin-top: 10px;
+        right: 5%;
+    }
+
+    .presentacion {
+        padding: 5% 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentacion__contenido {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .footer {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 15px 3%;
+    }
+
+    .header__menu {
+        gap: 20px;
+    }
+
+    .header__menu__link {
+        font-size: 1.2rem;
+    }
+
+    .header__github-link {
+        font-size: 1.2rem;
+        top: 20px;
+    }
+
+    .header__github-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 1.5rem;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 0.9rem;
+    }
+
+    .presentacion {
+        padding: 5% 3%;
+    }
+
+    .footer {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        padding: 10px 2%;
+    }
+
+    .header__menu {
+        gap: 15px;
+    }
+
+    .header__menu__link {
+        font-size: 1rem;
+    }
+
+    .header__github-link {
+        font-size: 1rem;
+        top: 15px;
+        right: 2%;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 1.3rem;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 0.8rem;
+    }
 }
 

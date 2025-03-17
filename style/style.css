@@ -66,9 +66,18 @@ body {
 .header-banner {
     flex: 40%;
     display: flex;
+    flex-direction: column; /* Cambiado a columna */
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 40px 20px 0; /* Añadido padding horizontal */
+    text-align: center; /* Centrar texto */
+}
+
+.header-banner img {
+    max-width: 100%; /* Hacer la imagen responsive */
+    height: auto;
+    width: auto;
+    max-height: 200px; /* Altura máxima en pantallas grandes */
 }
 
 /* Sección de entrada */
@@ -123,6 +132,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    
 }
 
 /* Estilos de entrada de texto */
@@ -243,4 +253,132 @@ ul {
 .name-list.scrollable::-webkit-scrollbar-thumb {
     background: var(--color-tertiary);
     border-radius: 4px;
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .header__menu {
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .header__menu__link {
+        font-size: 1.2rem;
+    }
+
+    .input-wrapper {
+        max-width: 90%;
+    }
+
+    .button-container {
+        width: 90%;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+
+    .header-banner img {
+        max-height: 150px; /* Reducir altura en tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-title {
+        font-size: 24px;
+        margin-bottom: 15px; /* Espacio entre título e imagen */
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .header__menu {
+        gap: 20px;
+    }
+
+    .header__menu__link {
+        font-size: 1rem;
+    }
+
+    .input-name {
+        font-size: 14px;
+    }
+
+    .button-add {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .button-draw, 
+    .button-reset {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .button-draw img, 
+    .button-reset img {
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .name-list {
+        max-height: 120px;
+    }
+
+    .result-list {
+        font-size: 18px;
+    }
+
+    .header-banner {
+        padding: 20px 10px 0;
+    }
+
+    .header-banner img {
+        max-height: 120px; /* Reducir altura en smartphones */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-name {
+        border-radius: 25px;
+    }
+
+    .button-add {
+        border-radius: 25px;
+        width: 100%;
+    }
+
+    .header-banner img {
+        max-height: 100px; /* Reducir aún más en pantallas muy pequeñas */
+    }
 }
