@@ -62,14 +62,22 @@ function mostrarAmigosDeLista() {
         elementoLI.textContent = amigos[i];
         lista.appendChild(elementoLI);
     }
-  
+
+// si la lista de amigos es mayor a 5, se activa un scroll
+    if (amigos.length > 3) {
+        lista.classList.add('scrollable');
+    } else {
+        lista.classList.remove('scrollable');
+    } 
 }
 // una funcion para reiniciar la lista de amigos
 function reiniciar() {
     amigos = [];
     ganadores.clear();
     ultimoGanador = null;
-    document.getElementById('listaAmigos').innerHTML = '';
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+    lista.classList.remove('scrollable');
     document.getElementById('resultado').innerHTML = '';
     document.getElementById('amigo').value = '';
 }
